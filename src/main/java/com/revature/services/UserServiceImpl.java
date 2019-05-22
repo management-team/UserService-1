@@ -24,7 +24,7 @@ import com.revature.repos.UserRepo;
 
 @Service
 public class UserServiceImpl implements UserService {
-	
+
 	@Value("${cognito.key}")
 	private String cognitoKey;
 	
@@ -44,6 +44,7 @@ public class UserServiceImpl implements UserService {
 
 	@Autowired
 	private CognitoUtil cognitoUtil;
+//	List<String> roles = cognitoUtil.getRequesterRoles();
 
 	@Override
 	public User findOneById(int id) {
